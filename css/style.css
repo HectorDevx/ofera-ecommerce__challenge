@@ -442,7 +442,7 @@ Footer
 .newsletter {
   margin-bottom: var(--space-large);
   min-height: 458px;
-  background-image: url(../img/news@1.5x.png);
+  background-image: url(..img/news@1.5x.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
