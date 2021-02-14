@@ -2,7 +2,7 @@
 Colors
 -------------------------------*/
 :root {
-  --color-white: #f9f9fa;
+  --color-white: #f9f7f8;
   --color-white-200: #eeeef1;
   --color-gray-300: #dedde3;
   --color-gray-500: #716e87;
@@ -64,8 +64,8 @@ h3 {
 
 h4 {
   font-weight: 200;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 22px;
+  line-height: 28px;
 }
 
 h5 {
@@ -245,11 +245,18 @@ Header
 Main
 -------------------------------*/
 .main {
+  margin-top: var(--space-small);
+  margin-bottom: var(--space-large);
   height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.main img {
+  max-width: 100%;
+  border-radius: var(--space-medium);
 }
 
 .categories__title {
@@ -272,9 +279,11 @@ Carousel
 }
 
 .carousel__container {
+  overflow: scroll;
+  overflow: hidden;
   white-space: nowrap;
   margin-top: var(--space-mini);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-large);
   padding-bottom: var(--space-mini);
 }
 
@@ -283,12 +292,13 @@ Carousel
 }
 
 .carousel__container:hover .carousel-item:hover {
-  transform: scale(1.1);
+  transform: scale(1);
   opacity: 1;
+  box-shadow: 0px 2px 16px var(--color-gray-300);
 }
 
 .carousel-item {
-  background-color: var(--color-brand-secondary-500);
+  background-color: var(--color-white);
   width: 422px;
   height: 600px;
   border-radius: var(--space-medium);
@@ -302,7 +312,7 @@ Carousel
 }
 
 .carousel-item:hover ~ .carousel-item {
-  transform: translate3d(100px, 0, 0);
+  transform: translate3d(40px, 0, 0);
 }
 
 .carousel-item__img {
@@ -311,11 +321,16 @@ Carousel
   object-fit: cover;
 }
 
+.small-item {
+  width: 422px;
+  height: 422px;
+}
+
 .carousel-item__details {
   background: linear-gradient(
     to top,
-    rgba(42, 41, 50, 0.9) 0%,
-    rgba(42, 41, 50, 0) 100%
+    rgba(255, 255, 255, 0.8) 20%,
+    rgba(255, 255, 255, 0) 70%
   );
   opacity: 1;
   -webkit-transition: 450ms opacity;
@@ -332,22 +347,122 @@ Carousel
   align-items: flex-start;
   justify-content: flex-end;
   flex-direction: column;
-  opacity: 0.8;
-  color: var(--color-white);
+  color: var(--color-brand-primary-700);
 }
 
 .carousel-item__details img {
-  width: 20px;
+  width: 32px;
+  margin-right: var(--space-mini);
   display: inline-block;
 }
 
 .carousel-item__details img:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
-.carousel-item__details p {
-  color: var(--color-white);
-  display: block;
+.carousel-item__details__price {
+  color: var(--color-black-600);
+  width: 100%;
+  margin-top: var(--space-medium);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+/*-------------------------------
+Ads
+-------------------------------*/
+.ads {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: var(--space-small);
+}
+
+.ads img {
+  width: 100%;
+  border-radius: var(--space-small);
+}
+
+/*-------------------------------
+Categories
+-------------------------------*/
+.categories {
+  margin: var(--space-large) var(--space-xl);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+}
+
+.category {
+  max-width: 320px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.category img {
+  margin-right: var(--space-mini);
+  max-width: 64px;
+}
+
+/*-------------------------------
+Brands
+-------------------------------*/
+.brands img {
+  width: 100%;
+  border-radius: var(--space-medium);
+}
+
+/*-------------------------------
+Footer
+-------------------------------*/
+.caracteristics {
+  margin: var(--space-large) var(--space-xl);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.caracteristic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-brand-primary-500);
+}
+
+.caracteristic__icon {
+  width: 123px;
+  margin-bottom: var(--space-medium);
+}
+
+/*-------------------------------
+Footer
+-------------------------------*/
+.newsletter {
+  margin-bottom: var(--space-large);
+  min-height: 458px;
+  background-image: url(../img/news@1.5x.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+  border-radius: var(--space-medium);
+}
+
+.newsletter__container {
+  height: 100%;
+  grid-column-start: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter__container h2 {
+  margin-bottom: var(--space-medium);
+  color: var(--color-brand-primary-500);
 }
 
 /*-------------------------------
