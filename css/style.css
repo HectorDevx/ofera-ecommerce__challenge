@@ -139,6 +139,10 @@ body {
 /*-------------------------------
 Header
 -------------------------------*/
+.header__mobile {
+  display: none;
+}
+
 .header {
   margin: 0 var (--space-medium);
   margin-bottom: var(--space-medium);
@@ -212,7 +216,7 @@ Header
   align-items: center;
 }
 
-.header__menu img {
+.avatar {
   max-width: 48px;
   margin-right: var(--space-small);
 }
@@ -271,7 +275,7 @@ Main
 .main {
   margin-top: var(--space-small);
   margin-bottom: var(--space-large);
-  height: 600px;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -425,7 +429,7 @@ Categories
   align-items: center;
 }
 
-.category img {
+.category__icon {
   margin-right: var(--space-mini);
   max-width: 64px;
 }
@@ -442,7 +446,7 @@ Brands
 Footer
 -------------------------------*/
 .caracteristics {
-  margin: var(--space-large) var(--space-xl);
+  margin: var(--space-xl);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -571,48 +575,161 @@ Animations
 Responsive
 -------------------------------*/
 @media only screen and (max-width: 600px) {
-  .header {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  .categories__title {
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
   }
-  .login {
-    margin-top: -2px;
+
+  .categories__subtitle {
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
   }
-  .login__container {
-    background-color: transparent;
-    border: none;
-    padding: 30px;
-    width: 90%;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+
+  h3 {
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
   }
-  .login__container--remember-me {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+
+  .header,
+  .menu__categories {
+    display: none;
   }
-  .login__container--remember-me label {
-    display: -webkit-box;
-    display: -ms-flexbox;
+
+  .header__mobile {
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
+    justify-content: space-between;
     align-items: center;
   }
+
+  .header__logo {
+    margin-right: var(--space-mini);
+    padding: var(--space-mini) var(--space-small) var(--space-mini)
+      var(--space-mini);
+  }
+
+  .header__img {
+    width: 90px;
+  }
+
+  .header__search__img {
+    width: var(--space-small);
+    height: var(--space-small);
+  }
+
+  .avatar {
+    max-width: 32px;
+    margin-right: 0;
+  }
+
+  .main {
+    min-height: auto;
+  }
+
+  .main img {
+    border-radius: var(--space-mini);
+  }
+
+  .ads {
+    grid-template-columns: 1fr;
+  }
+
+  .categories {
+    margin: var(--space-medium) 0;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .category {
+    max-width: 220px;
+    margin: var(--space-small) 0;
+  }
+
+  .category__icon {
+    width: 32px;
+  }
+
+  .category h4 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .carousel-item {
+    width: 263px;
+    height: 374px;
+  }
+
+  .carousel-item__img {
+    width: 263px;
+    height: 374px;
+  }
+
+  .carousel__container {
+    overflow-x: scroll;
+    margin-bottom: var(--space-small);
+  }
+
+  .carousel-item__details {
+    padding: var(--space-small);
+  }
+
+  .small-item {
+    width: 260px;
+    height: 260px;
+  }
+
+  .caracteristics {
+    margin: var(--space-large);
+    grid-template-columns: 1fr;
+  }
+
+  .caracteristic {
+    margin-bottom: var(--space-medium);
+  }
+
+  .caracteristic__icon {
+    width: 80px;
+    margin-bottom: var(--space-small);
+  }
+
+  .newsletter {
+    min-height: auto;
+    background-position: 80%;
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter__container {
+    padding: var(--space-medium);
+    grid-column-start: 1;
+    text-align: center;
+    justify-content: flex-end;
+  }
+
+  .newsletter__container h2 {
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--color-brand-primary-700);
+  }
+
   .footer {
-    -webkit-box-align: start;
-    -ms-flex-align: start;
+    height: auto;
     align-items: flex-start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    padding: 0px 21px;
-    margin-top: -2px;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
+    padding: var(--space-medium);
+    border-radius: var(--space-mini) var(--space-mini) 0 0;
     justify-content: space-evenly;
   }
+
+  .footer img {
+    max-width: 200px;
+  }
+
+  .footer__menu,
+  .footer__info {
+    text-align: center;
+    padding: var(--space-small);
+    min-width: 90%;
+  }
 }
-/*# sourceMappingURL=style.css.map */
