@@ -1,4 +1,4 @@
-# ofera-ecommerce__challenge
+# Ofera Shop - E Commerce
 Diseño Visual y Desarrollo de Landing Page con uso de la marca Ofera Shop. Challenge personal sin fines de lucro. 
 
 <kbd>
