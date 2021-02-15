@@ -269,6 +269,44 @@ input[type="text"] {
   border-radius: 4px;
 }
 
+.menu__mobile {
+  box-sizing: border-box;
+  display: none;
+  margin: 5% 0;
+  width: 100%;
+  height: 100vh;
+  border-radius: var(--space-small);
+  background-color: var(--color-brand-tertiary-500);
+  padding: var(--space-large);
+}
+
+.menu__mobile img {
+  width: 200px;
+  margin: 0;
+}
+
+.menu__mobile__contact {
+  color: var(--color-white-200);
+  margin-bottom: var(--space-medium);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.show {
+  display: block;
+}
+
+.menu__mobile__contact img {
+  width: var(--space-medium);
+  margin-right: var(--space-small);
+}
+
+.menu__mobile__categories h6 {
+  margin: var(--space-small) 0;
+  color: var(--color-white-200);
+}
+
 /*-------------------------------
 Main
 -------------------------------*/
